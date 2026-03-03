@@ -26,5 +26,10 @@ opt.swapfile = false
 opt.backup = false
 opt.undofile = true
 
+opt.laststatus = 3
+opt.showmode = false
+opt.ruler = false
+opt.showtabline = 0
+
 opt.completeopt = { "menu", "menuone", "noselect" }
 

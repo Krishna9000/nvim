@@ -4,4 +4,6 @@ vim.pack.add({
   "https://github.com/echasnovski/mini.icons",
   "https://github.com/ibhagwan/fzf-lua",
   "https://github.com/stevearc/oil.nvim",
+  "https://github.com/folke/which-key.nvim",
+  "https://github.com/nvim-mini/mini.statusline",
 })
