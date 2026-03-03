@@ -21,3 +21,6 @@ end, { desc = "Buffers" })
 keymap("n", "<leader>fh", function()
   require("fzf-lua").help_tags()
 end, { desc = "Help tags" })
+
+keymap("n", "-", "<cmd>Oil<cr>", { desc = "Open parent directory" })
+keymap("n", "<leader>of", "<cmd>Oil --float<cr>", { desc = "Oil float" })

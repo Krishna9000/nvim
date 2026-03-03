@@ -3,4 +3,5 @@ vim.pack.add({
   "https://github.com/lewis6991/gitsigns.nvim",
   "https://github.com/echasnovski/mini.icons",
   "https://github.com/ibhagwan/fzf-lua",
+  "https://github.com/stevearc/oil.nvim",
 })
