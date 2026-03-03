@@ -1,19 +1,23 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
 
-local map = vim.keymap.set
-map('n', '<leader>w', '<cmd>write<cr>', { desc = "Save" })
-map('n', '<leader>q', '<cmd>quit<cr>', { desc = "Quit" })
+local keymap = vim.keymap.set
 
-local builtin = require("telescope.builtin")
+keymap("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
+keymap("n", "<leader>q", "<cmd>q<cr>", { desc = "Quit window" })
+keymap("n", "<Esc>", "<cmd>nohlsearch<cr>", { desc = "Clear search highlight" })
 
-map("n", "<leader>ff", builtin.find_files, { desc = "Find Files" })
-map("n", "<leader>fg", builtin.live_grep, { desc = "Find Grep" })
-map("n", "<leader>fb", builtin.buffers, { desc = "Find Buffers" })
-map("n", "<leader>fr", builtin.oldfiles, { desc = "Find Old Files" })
-map("n", "<leader>/", builtin.current_buffer_fuzzy_find, { desc = "Current Buffer Fuzzy Find" })
+keymap("n", "<leader>ff", function()
+  require("fzf-lua").files()
+end, { desc = "Find files" })
 
-map("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Oil" })
-map("n", "<leader>o", function() 
-  require("oil").open_float()
-end, {})
+keymap("n", "<leader>fg", function()
+  require("fzf-lua").live_grep()
+end, { desc = "Live grep" })
+
+keymap("n", "<leader>fb", function()
+  require("fzf-lua").buffers()
+end, { desc = "Buffers" })
+
+keymap("n", "<leader>fh", function()
+  require("fzf-lua").help_tags()
+end, { desc = "Help tags" })
