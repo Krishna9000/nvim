@@ -6,4 +6,6 @@ vim.pack.add({
   "https://github.com/stevearc/oil.nvim",
   "https://github.com/folke/which-key.nvim",
   "https://github.com/nvim-mini/mini.statusline",
+  "https://github.com/stevearc/conform.nvim",
+  "https://github.com/tpope/vim-fugitive",
 })
