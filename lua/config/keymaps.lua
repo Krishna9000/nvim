@@ -49,3 +49,21 @@ keymap("n", "<leader>to", "<cmd>tabnew<cr>", { desc = "New tab" })
 keymap("n", "<leader>tx", "<cmd>tabclose<cr>", { desc = "Close tab" })
 keymap("n", "<leader>tn", "<cmd>tabnext<cr>", { desc = "Next tab" })
 keymap("n", "<leader>tp", "<cmd>tabprevious<cr>", { desc = "Previous tab" })
+
+-- Terminal
+vim.keymap.set("n", "<leader>tf", function()
+  _G.float_term:toggle()
+end, { desc = "Floating terminal" })
+
+vim.keymap.set("n", "<leader>tl", function()
+  _G.log_term:toggle()
+end, { desc = "Log terminal" })
+
+vim.keymap.set("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", { desc = "Horizontal terminal" })
+vim.keymap.set("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", { desc = "Vertical terminal" })
+
+vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
+vim.keymap.set("t", "<C-h>", [[<C-\><C-n><C-w>h]], { desc = "Go left" })
+vim.keymap.set("t", "<C-j>", [[<C-\><C-n><C-w>j]], { desc = "Go down" })
+vim.keymap.set("t", "<C-k>", [[<C-\><C-n><C-w>k]], { desc = "Go up" })
+vim.keymap.set("t", "<C-l>", [[<C-\><C-n><C-w>l]], { desc = "Go right" })

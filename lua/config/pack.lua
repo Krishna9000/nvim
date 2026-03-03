@@ -8,4 +8,5 @@ vim.pack.add({
   "https://github.com/nvim-mini/mini.statusline",
   "https://github.com/stevearc/conform.nvim",
   "https://github.com/tpope/vim-fugitive",
+  "https://github.com/akinsho/toggleterm.nvim",
 })
