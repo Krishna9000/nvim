@@ -62,7 +62,7 @@ end, { desc = "Log terminal" })
 vim.keymap.set("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", { desc = "Horizontal terminal" })
 vim.keymap.set("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", { desc = "Vertical terminal" })
 
-vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 vim.keymap.set("t", "<C-h>", [[<C-\><C-n><C-w>h]], { desc = "Go left" })
 vim.keymap.set("t", "<C-j>", [[<C-\><C-n><C-w>j]], { desc = "Go down" })
 vim.keymap.set("t", "<C-k>", [[<C-\><C-n><C-w>k]], { desc = "Go up" })
